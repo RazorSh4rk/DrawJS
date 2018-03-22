@@ -83,6 +83,7 @@ class DrawJS {
     }
     line(vertex0, vertex1, color) {
         this.ctx.strokeStyle = color
+        this.ctx.beginPath()
         this.ctx.moveTo(vertex0.x, vertex0.y)
         this.ctx.lineTo(vertex1.x, vertex1.y)
         this.ctx.stroke()
