@@ -13,7 +13,8 @@ To use it, just
 
 Or pull it from the raw GitHub source
 
-    <script src="https://raw.githubusercontent.com/RazorSh4rk/DrawJS/master/draw.js"></script>
+    <script src="https://cdn.rawgit.com/RazorSh4rk/DrawJS/52a16f16/draw.js"></script>
+    //use https://rawgit.com/RazorSh4rk/DrawJS/master/draw.js for development
 
 Check the documentation for more info about the built in functions.
 
