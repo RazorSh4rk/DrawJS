@@ -83,10 +83,31 @@ class DrawJS {
     }
     line(vertex0, vertex1, color) {
         this.ctx.strokeStyle = color
-        this.ctx.beginPath()
         this.ctx.moveTo(vertex0.x, vertex0.y)
         this.ctx.lineTo(vertex1.x, vertex1.y)
         this.ctx.stroke()
+    }
+    rotate(degrees){
+        this.ctx.rotate(degrees * Math.PI / 180)
+    }
+    flipX(){
+        this.ctx.scale(-1, 1)
+    }
+    flipY(){
+        this.ctx.scale(1, -1)
+    }
+    translate(x, y){
+        this.transLationX = x
+        this.translationY = y
+        this.ctx.translate(x, y)
+    }
+    center(){
+        this.transLationX = this.canv.width / 2
+        this.translationY = this.canv.height / 2
+        this.translate(this.canv.width / 2, this.canv.height / 2)
+    }
+    resetTranslation(){
+        this.translate(-this.transLationX, -this.translationY)
     }
 }
 
