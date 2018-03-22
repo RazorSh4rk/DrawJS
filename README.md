@@ -5,7 +5,7 @@ Why exactly is this better than the existing 18481 canvas libraries?
 It isn't, but you can attach DrawJS objects to different canvases so
 the contexts don't get messed up. That ought to worth something.
 The point is not writing a separate framework for canvas API, it's 
-wrapping it's code into a readable format.
+wrapping its code into a readable format.
 
 To use it, just 
 
