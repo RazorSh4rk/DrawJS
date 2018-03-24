@@ -100,7 +100,7 @@ class DrawJS {
         this.ctx.scale(1, -1)
     }
     translate(x, y){
-        this.transLationX = x
+        this.translationX = x
         this.translationY = y
         this.ctx.translate(x, y)
     }
