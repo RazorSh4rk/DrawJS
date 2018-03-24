@@ -5,8 +5,8 @@ class DrawJS {
         this.ctx = this.canv.getContext('2d')
         this.width = this.canv.width
         this.height = this.canv.height
-        this.transLationX = 0
-        this.transLationY = 0
+        this.translationX = 0
+        this.translationY = 0
     }
     resize(x, y) {
         this.width = x
@@ -27,7 +27,8 @@ class DrawJS {
     }
     background(color) {
         this.ctx.fillStyle = color
-        this.ctx.fillRect(this.transLationX-this.width, transLationY-this.height, this.transLationX+this.width, this.transLationY+this.height)
+        this.ctx.fillRect(this.translationX-this.width, this.translationY-this.height, 
+                          this.translationX+this.width, this.translationY+this.height)
     }
     arc(x, y, r, start, end, anticlock, color, fill) {
         if (fill) {
@@ -104,7 +105,7 @@ class DrawJS {
         this.ctx.translate(x, y)
     }
     center(){
-        this.transLationX = this.canv.width / 2
+        this.translationX = this.canv.width / 2
         this.translationY = this.canv.height / 2
         this.translate(this.canv.width / 2, this.canv.height / 2)
     }
