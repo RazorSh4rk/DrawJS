@@ -25,7 +25,7 @@ class DrawJS {
     }
     background(color) {
         this.ctx.fillStyle = color
-        this.ctx.fillRect(0, 0, this.width, this.height)
+        this.ctx.fillRect(-this.width, -this.height, this.width, this.height)
     }
     arc(x, y, r, start, end, anticlock, color, fill) {
         if (fill) {
