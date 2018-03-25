@@ -7,6 +7,8 @@ class DrawJS {
         this.height = this.canv.height
         this.translationX = 0
         this.translationY = 0
+        this.translated = false
+        this.logTranslate = true
     }
     resize(x, y) {
         this.width = x
@@ -26,9 +28,17 @@ class DrawJS {
         this.resize(window.innerWidth, window.innerHeight)
     }
     background(color) {
-        this.ctx.fillStyle = color
-        this.ctx.fillRect(this.translationX-this.width, this.translationY-this.height, 
-                          this.translationX+this.width, this.translationY+this.height)
+        if(this.translated){
+            this.ctx.fillStyle = color
+            this.ctx.fillRect(
+                this.translationX - (2 * this.width),
+                this.translationY - (2 * this.height),
+                2 * this.width, 2 * this.height
+            )
+        }else{
+            this.ctx.fillStyle = color
+            this.ctx.fillRect(0, 0, this.width, this.height)
+        }
     }
     arc(x, y, r, start, end, anticlock, color, fill) {
         if (fill) {
@@ -100,16 +110,25 @@ class DrawJS {
         this.ctx.scale(1, -1)
     }
     translate(x, y){
+        if(this.logTranslate)
+            console.log('This function is not yet fully supported'+
+        ' due to bugs with the background function. Use at your own risk.')
+        if(x==0&&y==0)
+            this.translated = false
         this.translationX = x
         this.translationY = y
+        this.translated = true
         this.ctx.translate(x, y)
     }
     center(){
+        this.logTranslate = false
         this.translationX = this.canv.width / 2
         this.translationY = this.canv.height / 2
         this.translate(this.canv.width / 2, this.canv.height / 2)
+        this.logTranslate = true
     }
     resetTranslation(){
+        this.translated = false
         this.translate(-this.transLationX, -this.translationY)
     }
 }
