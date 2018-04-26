@@ -69,7 +69,7 @@ The DrawJS built in line takes two Vertex objects(or anything with x, y members)
     d.line(new Vertex(500, 500), new Vertex(500, 520),'red')
 ---
 
-## Writing stuff
+## writing stuff
 
     d.write(text, x, y, color, fill, font)
     //where fill is a boolean, and font is e.g. '30px Arial'
