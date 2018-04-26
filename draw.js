@@ -28,14 +28,14 @@ class DrawJS {
         this.resize(window.innerWidth, window.innerHeight)
     }
     background(color) {
-        if(this.translated){
+        if (this.translated) {
             this.ctx.fillStyle = color
             this.ctx.fillRect(
                 this.translationX - (2 * this.width),
                 this.translationY - (2 * this.height),
                 2 * this.width, 2 * this.height
             )
-        }else{
+        } else {
             this.ctx.fillStyle = color
             this.ctx.fillRect(0, 0, this.width, this.height)
         }
@@ -100,36 +100,46 @@ class DrawJS {
         this.ctx.lineTo(vertex1.x, vertex1.y)
         this.ctx.stroke()
     }
-    rotate(degrees){
+    rotate(degrees) {
         this.ctx.rotate(degrees * Math.PI / 180)
     }
-    flipX(){
+    flipX() {
         this.ctx.scale(-1, 1)
     }
-    flipY(){
+    flipY() {
         this.ctx.scale(1, -1)
     }
-    translate(x, y){
-        if(this.logTranslate)
-            console.log('This function is not yet fully supported'+
-        ' due to bugs with the background function. Use at your own risk.')
-        if(x==0&&y==0)
+    translate(x, y) {
+        if (this.logTranslate)
+            console.log('This function is not yet fully supported' +
+                ' due to bugs with the background function. Use at your own risk.')
+        if (x == 0 && y == 0)
             this.translated = false
         this.translationX = x
         this.translationY = y
         this.translated = true
         this.ctx.translate(x, y)
     }
-    center(){
+    center() {
         this.logTranslate = false
         this.translationX = this.canv.width / 2
         this.translationY = this.canv.height / 2
         this.translate(this.canv.width / 2, this.canv.height / 2)
         this.logTranslate = true
     }
-    resetTranslation(){
+    resetTranslation() {
         this.translated = false
         this.translate(-this.transLationX, -this.translationY)
+    }
+    write(text, x, y, color, fill, font) {
+        this.ctx.font = font
+        if(fill){
+            this.ctx.fillStyle = color
+            this.ctx.fillText(text, x, y)
+        }else{
+            this.ctx.strokeStyle = color
+            this.ctx.strokeText(text, x, y)
+        }
     }
 }
 
