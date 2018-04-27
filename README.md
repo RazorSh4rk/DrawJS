@@ -1,11 +1,8 @@
 # DrawJS
 
 Easy to use HTML5 canvas drawing library.
-Why exactly is this better than the existing 18481 canvas libraries?
-It isn't, but you can attach DrawJS objects to different canvases so
-the contexts don't get messed up. That ought to worth something.
-The point is not writing a separate framework for canvas API, it's 
-wrapping its code into a readable format.
+The point is wrapping the canvas functions into a readable, oop format,
+so you don't need to write 3 lines of code for one blue line.
 
 To use it, just 
 
