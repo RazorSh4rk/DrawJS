@@ -29,14 +29,12 @@
 ```javascript
 let d = new DrawJS('canvas_id')
 ```
----
 
 ### Resizing the Canvas
 ``` javascript
 d.resize(100, 100)
 d.fullscreen()
 ```
----
 
 ### Setting the Background
 ```javascript
@@ -44,8 +42,6 @@ d.background('black')
 ```
 
 (Note: this draws over everything, resetting the canvas.)
-
----
 
 ### Drawing Circular Shapes
 ```javascript
@@ -62,7 +58,6 @@ d.point(x, y, color)
 
 d.pixel(x, y, color)
 ```
----
 
 ### Drawing Points
 ```javascript
@@ -73,7 +68,6 @@ d.point(x, y, color)
 ```javascript
 d.rect(topLeftX, topLeftY, width, height, color, fill)
 ```
----
 
 ### Drawing Polygons
 
@@ -91,7 +85,6 @@ d.polygon([
 ],'blue', true)
 //Will give you a big, filled out, blue triangle
 ```
----
 
 ### Drawing Lines
 
@@ -102,7 +95,6 @@ d.line(fromVertex, toVertex, color)
 //e.g.
 d.line(new Vertex(500, 500), new Vertex(500, 520),'red')
 ```
----
 
 ### Writing Text
 ```javascript
