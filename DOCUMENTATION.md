@@ -1,25 +1,16 @@
 # DrawJS Documentation
-[Initializing a DrawJS Variable](DOCUMENTATION.md#initializing-a-drawjs-variable)
+[Initializing a DrawJS Variable](DOCUMENTATION.md#initializing-a-drawjs-variable)<br>
+[Resizing the Canvas](DOCUMENTATION.md#resizing-the-canvas)<br>
+[Setting the Background](DOCUMENTATION.md#setting-the-background)<br>
+[Drawing Circular Shapes](DOCUMENTATION.md#drawing-circular-shapes)<br>
+[Drawing Points](DOCUMENTATION.md#drawing-points)<br>
+[Drawing Rectangles](DOCUMENTATION.md#drawing-rectangles)<br>
+[Drawing Polygons](DOCUMENTATION.md#drawing-polygons)<br>
+[Drawing Lines](DOCUMENTATION.md#drawing-lines)<br>
+[Writing Text](DOCUMENTATION.md#writing-text)<br>
+[Scaling and Rotating the Canvas](DOCUMENTATION.md#scaling-and-rotating-the-canvas)<br>
 
-[Resizing the Canvas](DOCUMENTATION.md#resizing-the-canvas)
-
-[Setting the Background](DOCUMENTATION.md#setting-the-background)
-
-[Drawing Circular Shapes](DOCUMENTATION.md#drawing-circular-shapes)
-
-[Drawing Points](DOCUMENTATION.md#drawing-points)
-
-[Drawing Rectangles](DOCUMENTATION.md#drawing-rectangles)
-
-[Drawing Polygons](DOCUMENTATION.md#drawing-polygons)
-
-[Drawing Lines](DOCUMENTATION.md#drawing-lines)
-
-[Writing Text](DOCUMENTATION.md#writing-text)
-
-[Scaling and Rotating the Canvas](DOCUMENTATION.md#scaling-and-rotating-the-canvas)
-
-=======
+---
 
 ### Initializing a DrawJS Variable
 
@@ -29,14 +20,12 @@
 ```javascript
 let d = new DrawJS('canvas_id')
 ```
----
 
 ### Resizing the Canvas
 ``` javascript
 d.resize(100, 100)
 d.fullscreen()
 ```
----
 
 ### Setting the Background
 ```javascript
@@ -44,8 +33,6 @@ d.background('black')
 ```
 
 (Note: this draws over everything, resetting the canvas.)
-
----
 
 ### Drawing Circular Shapes
 ```javascript
@@ -62,7 +49,6 @@ d.point(x, y, color)
 
 d.pixel(x, y, color)
 ```
----
 
 ### Drawing Points
 ```javascript
@@ -73,7 +59,6 @@ d.point(x, y, color)
 ```javascript
 d.rect(topLeftX, topLeftY, width, height, color, fill)
 ```
----
 
 ### Drawing Polygons
 
@@ -91,7 +76,6 @@ d.polygon([
 ],'blue', true)
 //Will give you a big, filled out, blue triangle
 ```
----
 
 ### Drawing Lines
 
@@ -102,7 +86,6 @@ d.line(fromVertex, toVertex, color)
 //e.g.
 d.line(new Vertex(500, 500), new Vertex(500, 520),'red')
 ```
----
 
 ### Writing Text
 ```javascript
