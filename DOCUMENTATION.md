@@ -1,25 +1,16 @@
 # DrawJS Documentation
-[Initializing a DrawJS Variable](DOCUMENTATION.md#initializing-a-drawjs-variable)
+[Initializing a DrawJS Variable](DOCUMENTATION.md#initializing-a-drawjs-variable)<br>
+[Resizing the Canvas](DOCUMENTATION.md#resizing-the-canvas)<br>
+[Setting the Background](DOCUMENTATION.md#setting-the-background)<br>
+[Drawing Circular Shapes](DOCUMENTATION.md#drawing-circular-shapes)<br>
+[Drawing Points](DOCUMENTATION.md#drawing-points)<br>
+[Drawing Rectangles](DOCUMENTATION.md#drawing-rectangles)<br>
+[Drawing Polygons](DOCUMENTATION.md#drawing-polygons)<br>
+[Drawing Lines](DOCUMENTATION.md#drawing-lines)<br>
+[Writing Text](DOCUMENTATION.md#writing-text)<br>
+[Scaling and Rotating the Canvas](DOCUMENTATION.md#scaling-and-rotating-the-canvas)<br>
 
-[Resizing the Canvas](DOCUMENTATION.md#resizing-the-canvas)
-
-[Setting the Background](DOCUMENTATION.md#setting-the-background)
-
-[Drawing Circular Shapes](DOCUMENTATION.md#drawing-circular-shapes)
-
-[Drawing Points](DOCUMENTATION.md#drawing-points)
-
-[Drawing Rectangles](DOCUMENTATION.md#drawing-rectangles)
-
-[Drawing Polygons](DOCUMENTATION.md#drawing-polygons)
-
-[Drawing Lines](DOCUMENTATION.md#drawing-lines)
-
-[Writing Text](DOCUMENTATION.md#writing-text)
-
-[Scaling and Rotating the Canvas](DOCUMENTATION.md#scaling-and-rotating-the-canvas)
-
-=======
+---
 
 ### Initializing a DrawJS Variable
 
