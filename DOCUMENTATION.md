@@ -1,26 +1,32 @@
 # DrawJS Documentation
 
-## initializing a DrawJS variable
+## Initializing a DrawJS Variable
+
+```html
     <canvas id="canvas_id"></canvas>
+```
+```javascript
     let d = new DrawJS('canvas_id')
+```
 ---
 
-### resizing the canvas
+### Resizing the Canvas
+```javascript
     d.resize(100, 100)
-
     d.fullscreen()
+```
 ---
 
-## setting the background
-
+## Setting the Background
+```javascript
     d.background('black')
+```
 
-(note: this draws over everything, resetting the canvas)
-
-
+(Note: this draws over everything, resetting the canvas.)
 ---
 
-## drawing circular shapes
+## Drawing Circular Shapes
+```javascript
     d.arc(x, y, radius, startAngle, endAngle, counterclockwise, color, fill)
     //e.g.
     d.arc(100, 100, 100, 0, Math.PI, false, 'red', false)
@@ -33,19 +39,24 @@
     d.point(x, y, color)
 
     d.pixel(x, y, color)
+```
 ---
 
-## drawing points
+## Drawing Points
+```javascript
     d.point(x, y, color)
+```
 
-## drawing rectangles
+## Drawing Rectangles
+```javascript
     d.rect(topLeftX, topLeftY, width, height, color, fill)
+```
 ---
 
-## drawing polygons
+## Drawing Polygons
 
 DrawJS ha a built in Vertex type, but generally, every object with x and y members should work.
-
+```javascript
     let v = new Vertex(10, 10)
 
     d.polygon(vertices, color, fill)
@@ -57,25 +68,28 @@ DrawJS ha a built in Vertex type, but generally, every object with x and y membe
         new Vertex(1000, 500)
     ],'blue', true)
     //will give you a big, filled out, blue triangle
+```
 ---
 
-## drawing lines
+## Drawing Lines
 
 The DrawJS built in line takes two Vertex objects(or anything with x, y members).
-
+```javascript
     d.line(fromVertex, toVertex, color)
 
     //e.g.
     d.line(new Vertex(500, 500), new Vertex(500, 520),'red')
+```
 ---
 
-## writing stuff
-
+## Writing Text
+```javascript
     d.write(text, x, y, color, fill, font)
     //where fill is a boolean, and font is e.g. '30px Arial'
+```
 
-
-## scaling and rotating the canvas
+## Scaling and Rotating the Canvas
+```javascript
     d.rotate(degrees)
 
     d.flipX()
@@ -90,3 +104,4 @@ The DrawJS built in line takes two Vertex objects(or anything with x, y members)
 
     d.resetTranslation
     //places the origo in the initial to left position
+```
