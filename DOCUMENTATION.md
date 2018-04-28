@@ -1,5 +1,18 @@
 # DrawJS Documentation
+[Initializing a DrawJS Variable](DOCUMENTATION.md#initializing-a-drawjs-variable)
 
+<<<<<<< Updated upstream
+=======
+[Resizing the Canvas](DOCUMENTATION.md#resizing-the-canvas)
+
+[Setting the Background](DOCUMENTATION.md#setting-the-background)
+
+[Drawing Circular Shapes](Drawing Circular Shapes)
+
+[Drawing Points]()
+
+
+>>>>>>> Stashed changes
 ### Initializing a DrawJS Variable
 
 ```html
