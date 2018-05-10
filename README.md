@@ -12,6 +12,13 @@ Or pull it from the raw GitHub source
 ```html
 <script src="https://rawgit.com/RazorSh4rk/DrawJS/master/draw.js"></script>
 ```
+
+Use the minified versions in production. The first url will be stable, but changes are reflected slower, it is the one recommended for high traffic sites.
+```html
+<script src="https://cdn.rawgit.com/RazorSh4rk/DrawJS/8fe13774/draw.min.js"></script>
+<script src="https://rawgit.com/RazorSh4rk/DrawJS/master/draw.min.js"></script>
+```
+
 Check the documentation for more info about the built in functions.
 
 Drawing a cute animal is just 10 lines of code:
