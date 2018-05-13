@@ -1,0 +1,117 @@
+<head>
+    <title>DrawJS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://rawgit.com/RazorSh4rk/DrawJS/master/draw.min.js"></script> 
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="menu" id="menu">
+        <canvas class="canvas-backg" id="menu-canvas"></canvas>
+        <a href="#" class="title" onclick="disp('s')">
+            DrawJS
+        </a>
+        <p class="menu-item" id="learn" onclick="disp('l')">
+            <a href="#">learn</a>
+        </p>
+        <p class="menu-item" id="download" onclick="disp('d')">
+            <a href="#">download</a>
+        </p>
+        <p class="menu-item" id="contribute" onclick="disp('c')">
+            <a href="#">contribute</a>
+        </p>
+    </div>
+
+    <div class="content">
+
+
+
+        <div class="splash-c" id="splash-c">
+            Hi! If you are a coder and ever wanted to make a game (do i even have to say the second part?), you probably came across the whole canvas thing.
+            Yes, it is weird and overly complicated, and no, you are not alone who thinks that. So here, an attempt, at least, to make more sense of it is
+            DrawJS. We are wrapping the core canvas functions in an easy-to-use format and gradually adding cool features to speed up development.<br><br>
+            Games are not the only thing where you can use this library, of course, anything you would normally want to visualize is doable. We are always
+            interested in seeing what you come up with, so if you use Draw in one of your projects, contact us, and we will add you to a hall of fame.<br><br>
+            'But how is this different from p5?' I hear you ask. I mean not literally, this website is <i>totally</i> not listening through the microphone.
+            The goal here is not a complete framework, with physics simulation and whatnot. I mean you can write those yourself is you want to. This library
+            is just here to simplify drawing things on a canvas.<br><br>
+        </div>
+
+
+
+        <div class="learn-c" id="learn-c">
+            DrawJS is not super hard to learn. The basic funcionality is all abstracted away
+            for you so you won't have to memorize the obscure canvas API.
+            
+            We have an extensive documentation 
+            <a href="https://github.com/RazorSh4rk/DrawJS/blob/master/DOCUMENTATION.md#writing-text">here</a>. All the current features are searchable
+            and organized.
+
+            You can see the example in action here: 
+            <br><canvas id="animal-canv"></canvas><br>
+
+            Draw is also perfectly good for making small games. Here is an example of a
+            Ludum Dare entry written with DrawJS:
+            <br><iframe src="https://razorsh4rk.github.io/that-game-with-bullets-and-food/"></iframe><br>
+
+
+            Displaying data is also easy, for example take a look at the rating of the last 
+            20 Studio Ghibli films. (The 41 is Tales from Earthsea, I know you are interested
+            about that.)
+            <br><canvas id="ghibli-canv"></canvas><br>
+
+            All of these sources are available <a href="./canv.js">here.</a>
+            The game has a bit more code, <a href="https://github.com/RazorSh4rk/that-game-with-bullets-and-food">check it out</a>.
+        </div>
+
+
+
+        <div class="download-c" id="download-c">
+            The easiest way to use Draw is to include it from a cdn:
+            <p class="code">
+                &lt;script src="https://rawgit.com/RazorSh4rk/DrawJS/master/draw.js"&gt;&lt;/script&gt;
+            </p>
+            You can also download the repo and use the .js file:
+            <p class="code">
+                <a href="https://github.com/RazorSh4rk/DrawJS/archive/master.zip">click</a>
+            </p>
+            If you decide to use Draw in production (yay), use the minified sources.
+            <p class="code">
+                &lt;script src="https://cdn.rawgit.com/RazorSh4rk/DrawJS/8fe13774/draw.min.js"&gt;&lt;/script&gt;
+                <br><br>
+                &lt;script src="https://rawgit.com/RazorSh4rk/DrawJS/master/draw.min.js"&gt;&lt;/script&gt;
+            </p>
+            <p class="small-text">
+            License information: <br>
+            This library is provided under the 'do-what-the-hell-you-want' license.<br>
+            The content of the license is as follows:<br><br>
+                <p>
+                    By using this product, I agree that I will do what the hell I want.
+                </p>
+            </p>
+        </div>
+
+
+
+        <div class="contribute-c" id="contribute-c">
+            Every contribution is welcome. There is no clear roadmap, if some new possible
+            feature comes up, it will be added to the GitHub kanban board. If you have a 
+            free hour and want to help out, you are welcome to.
+            <div class="spacer"></div>
+            That being said, there are a few guidelines. Try to follow the current coding style.
+            Do not use JS hacks (or at least not extensively). If you want to add a feature that
+            is not strongly connected to drawing things (e.g. sounds), do so in a separate file.
+            I will take care of minification and cdn deployment, don't worry about that. If you
+            add a new feature, please document it, or ask for documentation in your pull request.
+            <div class="spacer"></div>
+            You can help with other stuff too, you might have noticed that I'm not great with web
+            design, so if you want to revamp this site, that would be cool.
+        </div>
+
+
+
+    </div>
+
+    <script src="main.js"></script>
+    <script src="canv.js"></script>
+</body>
