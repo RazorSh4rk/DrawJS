@@ -7,6 +7,7 @@
 [Drawing Rectangles](DOCUMENTATION.md#drawing-rectangles)<br>
 [Drawing Polygons](DOCUMENTATION.md#drawing-polygons)<br>
 [Drawing Lines](DOCUMENTATION.md#drawing-lines)<br>
+[Drawing Images](DOCUMENTATION.md#drawing-images)<br>
 [Writing Text](DOCUMENTATION.md#writing-text)<br>
 [Scaling and Rotating the Canvas](DOCUMENTATION.md#scaling-and-rotating-the-canvas)<br>
 
@@ -19,6 +20,9 @@
 ```
 ```javascript
 let d = new DrawJS('canvas_id')
+
+d.getCanvas() // returns the DOM element
+d.getContext() // returns the 2d context of the canvas
 ```
 
 ### Resizing the Canvas
@@ -85,6 +89,20 @@ d.line(fromVertex, toVertex, color)
 
 //e.g.
 d.line(new Vertex(500, 500), new Vertex(500, 520),'red')
+```
+
+### Drawing Images
+```javascript
+d.image(path, x, y, width, height)
+//where path is the path of the image as a string, e.g. './big_meme.jpg'
+// x and y are the top left corner of the images on the canvas
+// width and height will scale the image
+
+//you can also crop images
+d.imageCrop(path, x, y, width, height, cropX, cropY, cropWidth, cropHeight)
+// x, y, width and height are the same
+// cropX and cropY will be the top left point at which the original picture will be cropped
+// cropWidth and cropHeight will be the width and height of the cropped piece
 ```
 
 ### Writing Text

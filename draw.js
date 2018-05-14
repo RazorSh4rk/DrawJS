@@ -10,6 +10,12 @@ class DrawJS {
         this.translated = false
         this.logTranslate = true
     }
+    getCanvas(){
+        return this.canv
+    }
+    getContext(){
+        return this.ctx
+    }
     resize(x, y) {
         this.width = x
         this.canv.width = x
@@ -112,7 +118,7 @@ class DrawJS {
     translate(x, y) {
         if (this.logTranslate)
             console.log('This function is not yet fully supported' +
-                ' due to bugs with the background function. Use at your own risk.')
+                ' due to bugs with the background function. Use at your own risk.');
         if (x == 0 && y == 0)
             this.translated = false
         this.translationX = x
@@ -133,12 +139,33 @@ class DrawJS {
     }
     write(text, x, y, color, fill, font) {
         this.ctx.font = font
-        if(fill){
+        if (fill) {
             this.ctx.fillStyle = color
             this.ctx.fillText(text, x, y)
-        }else{
+        } else {
             this.ctx.strokeStyle = color
             this.ctx.strokeText(text, x, y)
+        }
+    }
+    image(path, x, y, width, height) {
+        let img = new Image(),
+            sup = this
+        img.src = path
+        img.onload = function () {
+            if (width !== undefined && height !== undefined) {
+                sup.ctx.drawImage(img, x, y, width, height)
+            }
+            else {
+                sup.ctx.drawImage(img, x, y)
+            }
+        }
+    }
+    imageCrop(path, x, y, width, height, cropX, cropY, cropWidth, cropHeight){
+        let img = new Image(),
+            sup = this
+        img.src = path
+        img.onload = function(){
+            sup.ctx.drawImage(img, cropX, cropY, cropWidth, cropHeight, x, y, width, height)
         }
     }
 }
