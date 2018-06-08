@@ -10,6 +10,7 @@
 [Drawing Images](DOCUMENTATION.md#drawing-images)<br>
 [Writing Text](DOCUMENTATION.md#writing-text)<br>
 [Scaling and Rotating the Canvas](DOCUMENTATION.md#scaling-and-rotating-the-canvas)<br>
+NEW: [Tilemaps](DOCUMENTATION.md#Tilemaps)
 
 ---
 
@@ -128,3 +129,21 @@ d.center()
 d.resetTranslation
 //Places the origin in the initial to left position
 ```
+
+### Tilemaps
+
+(Experimental, report issues if you find any)
+
+The tilemap class only supports even sized tile as of now. That means each tile has to be the same size.
+```javascript
+let tm  = new TileMap('tilemap.png', tileWidth, tileHeight)
+tm.drawTile(drawJSInstance, x, y, rowIndex, columnIndex)
+// you must supply an instanced DrawJS variable, in our case 'd'
+// x and y are the top left corner of the displayed tile
+// row and column index are a the number on which the tile can be found
+// example under the code
+```
+
+Indexing example: 
+
+![img](https://i.imgur.com/LoWp5wA.jpg)
