@@ -10,7 +10,7 @@
 [Drawing Images](DOCUMENTATION.md#drawing-images)<br>
 [Writing Text](DOCUMENTATION.md#writing-text)<br>
 [Scaling and Rotating the Canvas](DOCUMENTATION.md#scaling-and-rotating-the-canvas)<br>
-NEW: [Tilemaps](DOCUMENTATION.md#Tilemaps)
+NEW: [Tilemaps](DOCUMENTATION.md#tilemaps)
 
 ---
 
