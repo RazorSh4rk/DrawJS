@@ -176,3 +176,28 @@ class Vertex {
         this.y = y
     }
 }
+
+class TileMap{
+    constructor(path, tileWidth, tileHeight){
+        this.tileWidth = tileWidth
+        this.tileHeight = tileHeight
+        this.path = path
+
+        this.img = new Image()
+        this.img.src = path
+        this.mapWidth = 0
+        this.mapHeight = 0
+
+        let sup = this
+        this.img.onload = function(){
+            sup.mapWidth = sup.img.width
+            sup.mapHeight = sup.img.height
+        }
+    }
+    drawTile(d, x, y, i, j){
+        // TODO: document me plz
+        let offsetX = i * this.tileWidth,
+            offsetY = j * this.tileHeight
+        d.imageCrop(this.path, x, y, this.tileWidth, this.tileHeight, offsetX, offsetY, this.tileWidth, this.tileHeight)
+    }
+}
