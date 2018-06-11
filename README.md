@@ -1,5 +1,7 @@
 # DrawJS
 
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
 Easy to use HTML5 canvas drawing library.
 The point is wrapping the canvas functions into a readable, OOP format, so you don't need to write 3 lines of code for one blue line.
 
